@@ -35,6 +35,10 @@ width: 80px;
     justify-content: space-between;
     align-items: center;
 }
-.manu-elements {
+.menu-elements {
     font-weight: bold;
+    text-decoration: none; 
+    color: black;
+    font-size: 25px;
+    
 }
