@@ -1,0 +1,138 @@
+
+        body {
+            margin: 0;
+            font-family: sans-serif;
+            /* колір фону сторінки (світло-бежевий) */
+        }
+
+        /* --- Header --- */
+        .header {
+            padding: 20px;
+            /* колір фону (темно-бежевий) */
+            /* вирівнювання тексту по центру */
+        }
+
+        .header-title {
+            margin-bottom: 20px;
+            /* розмір шрифту */
+        }
+
+        .nav-btn {
+            border: none;
+            padding: 10px 20px;
+            margin: 0 10px;
+            cursor: pointer;
+            /* колір фону кнопки (коричневий) */
+            /* колір тексту (білий) */
+            /* округлення кутів */
+        }
+
+        /* --- Main Content --- */
+        .main {
+            padding: 40px;
+            /* максимальна ширина контенту (наприклад, 800px або 1000px) */
+            /* центрування блоку (margin: 0 auto) */
+        }
+
+        .product-title {
+            margin-bottom: 20px;
+            /* розмір шрифту заголовка */
+        }
+
+        .product-container {
+            display: flex;
+            gap: 40px;
+            margin-bottom: 40px;
+            /* вирівнювання елементів (align-items) */
+        }
+
+        .large-image {
+            width: 300px;
+            height: 300px;
+            /* колір фону (сірий) */
+            /* округлення кутів (велике) */
+        }
+
+        .product-actions {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .price {
+            font-size: 24px;
+            margin-bottom: 20px;
+            /* жирний шрифт */
+        }
+
+        .action-btn {
+            border: none;
+            padding: 15px 30px;
+            margin-bottom: 15px;
+            cursor: pointer;
+            font-size: 16px;
+            /* колір фону (коричневий) */
+            /* колір тексту (білий) */
+            /* округлення кутів */
+        }
+
+        /* --- Text Sections --- */
+        .text-section {
+            margin-bottom: 20px;
+            font-size: 18px;
+            /* колір тексту */
+        }
+
+        /* --- Recommendations Section --- */
+        .recommendations {
+            margin-top: 60px;
+        }
+
+        .section-title {
+            margin-bottom: 30px;
+            /* розмір шрифту */
+        }
+
+        .cards-row {
+            display: flex;
+            gap: 20px;
+            /* перенесення рядків, якщо не влазять (flex-wrap) */
+        }
+
+        .small-card {
+            width: 150px;
+            padding: 10px;
+            /* колір фону картки (бежевий) */
+            /* округлення кутів */
+        }
+
+        .small-image {
+            width: 100%;
+            height: 100px;
+            margin-bottom: 10px;
+            /* колір фону (сірий) */
+            /* округлення кутів */
+        }
+
+        .card-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 14px;
+        }
+
+        .mini-btn {
+            border: none;
+            padding: 5px 10px;
+            /* колір фону (темний) */
+            /* колір тексту (білий) */
+            /* округлення кутів */
+        }
+
+        /* --- Footer --- */
+        .footer {
+            padding: 40px 20px;
+            /* колір фону (темно-бежевий) */
+            /* розмір шрифту */
+        }
+    
