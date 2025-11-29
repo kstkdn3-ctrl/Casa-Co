@@ -38,9 +38,19 @@ width: 80px;
 .menu-elements {
     font-weight: bold;
     text-decoration: none; 
-    color: black;
-    font-size: 25px;
-    
+    font-size: 30px;
+    color: black;  
+    transition: background-color 0.4s ease;
+}
+
+.menu-elements:hover{
+    display: flex;
+    background-color: #B77466;
+    color: white;
+    font-size: 30px ;
+    padding: 10px;
+    border-radius: 30px;
+    align-items: center;
 }
 .button{
 display: flex;
