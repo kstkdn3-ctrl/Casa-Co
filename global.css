@@ -209,11 +209,11 @@ large-image {
     color: #FFFF;
 }
 table{
-    margin-top: 20px;
-    width:100%;
+    margin-top: 30px;
+    width:100vw;
 }
 td{
-    height:30px;
+    height:50px;
 }
 .row1{
     background-color: #FFE1AF;
@@ -222,4 +222,18 @@ td{
 .row2{
     background-color: #E2B59A;
     color: #633316e1;
+}
+.text{
+    margin-top: 20px; 
+}
+.row{
+    height: 70px;
+    border: 2px solid rgb(243, 208, 145);
+    align-items: center;
+}
+.recommendations{
+    display: flex;
+    flex-direction: row;
+    gap: 30px;  
+    margin-top: 20px;
 }
