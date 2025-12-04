@@ -20,10 +20,18 @@
         <h2 class="product-title">Підсвічник-слоники</h2>
         <div class="product-container">
             <div class="image-box">
-                <img src="https://i.pinimg.com/736x/f7/56/67/f75667561fb34b0806a833581bf8baad.jpg" class="large-image">
-                <img src="https://img.joomcdn.net/9a5f4a45d63bef92ddcaa3e00e9a1a03c9470181_original.jpeg" class="large-image">
+                <img src="https://i.pinimg.com/736x/f7/56/67/f75667561fb34b0806a833581bf8baad.jpg" data-index="0" class="main-img">
+                <img src="https://img.joomcdn.net/9a5f4a45d63bef92ddcaa3e00e9a1a03c9470181_original.jpeg" data-index="1">
                 
             </div>
+            <div id="galleryModal" class="modal">
+    <div class="modal-content">
+
+        <span class="close" onclick="closeModal()">&times;</span>
+        <div class="thumbs" id="thumbs"></div>
+        <img id="modalBigImage" class="big-image">
+    </div>
+</div>
             <div>
             <div class="product-actions">
                 <div class="price"><p>Ціна:</p>
@@ -41,11 +49,11 @@
           </div>
           </div> 
           <div class="text-section"> 
-        <button class="text-btn">Характеристика товару</button>
-        <button class="text-btn">Умови доставки</button>
-        <button class="text-btn">Відгуки</button>
+        <button class="text-btn" id="char">Характеристика товару</button>
+        <button class="text-btn" id="delivery">Умови доставки</button>
+        <button class="text-btn" id="reviews">Відгуки(3)</button>
         </div> 
-        <h1 class="text">Характеристика товару</h1>
+        <h1 class="text" id="char1">Характеристика товару</h1>
         <table>
             <tr >
                 <td class="main-titles">Характеристика</td>
@@ -104,7 +112,7 @@
                 <td class="row1">Знімна LED-свічка (в комплекті), живлення від батарейок</td>
             </tr>
         </table>
-        <h1 class="text">Умови доставки</h1>
+        <h1 class="text" id="delivery1">Умови доставки</h1>
         <table>
             <tr>
                 <td class="row"></td>
@@ -117,16 +125,31 @@
                 <td class="row"> Нова пошта </td>
                 <td class="row">3-5 днів</td>
                 <td class="row"><span>70 грн.</span>
-                    <span>Безкоштовно для замовлень від 1000 грн.</span></td>
+                    <span><span style="font-weight: bold; color: #B77466">Безкоштовно</span> для замовлень <span style="font-weight: bold; color: #B77466">від 1000 грн.</span></span></td>
             </tr>
             <tr>
                 <td class="row" style="justify-content: center; display: flex;"><img src="5.png" style="width:20px"></td>
                 <td class="row">Укрпошта</td>
                 <td class="row">5-7 днів</td>
                 <td class="row"><span>50 грн.</span>
-                    <span>Безкоштовно для замовлень від 700 грн.</span></td>
+                    <span><span style="font-weight: bold; color: #B77466">Безкоштовно</span> для замовлень <span style="font-weight: bold; color: #B77466">від 700 грн.</span></span></td>
             </tr>
         </table>
+        <h1 class="text" id="reviews1">Відгуки (3)</h1>
+        <div style="gap: 10px; flex-direction: column; display: flex;">
+        <div class="com"> 
+            <p class="name">Karina D</p>
+            <p class="comment">Прийшло дуже швитко. Гарна якість.</p>
+        </div>
+        <div class="com"> 
+            <p class="name">Danylo</p>
+            <p class="comment">Замовляв на подарунок для дружини. Їй все сподобалось. Дякую за гарне святкове пакування!</p>
+        </div>
+        <div class="com"> 
+            <p class="name">Viktoriia S</p>
+            <p class="comment">Гарні слоники. Замовила. Гарно підходять д колекції))</p>
+        </div>
+        </div>
         <div class="recommendations">
             <div class="card" data-link="candlestick-elephant.html">
                  <img src="https://i.pinimg.com/736x/f7/56/67/f75667561fb34b0806a833581bf8baad.jpg" class="images">
@@ -156,13 +179,7 @@
                         <button class="button">Купити</button>
         </div>
                    </div>
-        <div class="card" data-link="double_vase.html">
-                   <img src="https://i.pinimg.com/1200x/44/25/4e/44254edc4d8a14591f6cdd108a2e1515.jpg" class="images">
-                    <div class="info">
-                        <p class="name_of_goods">Подвійна ваза</p>
-                        <button class="button">Купити</button>
-        </div>
-                    </div> 
+       
         </div>          
 
     <script src="script.js"></script>
