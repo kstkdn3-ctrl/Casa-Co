@@ -84,6 +84,11 @@ header {
     font-weight: bold; 
     margin: 0;
 }
+
+.h1 a {
+    text-decoration: none;
+    color: black;
+}
 .menu{
     display: flex;
     flex-direction: row;
