@@ -1,0 +1,34 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #FFE1AF; 
+    padding: 20px;
+}
+h1 {
+    color: #B77466; 
+    text-align: center;
+    border-bottom: 3px solid #E2B59A;
+    padding-bottom: 15px;
+}
+h2 {
+    color: #957C62; 
+    margin-top: 25px;
+    background: #FFE1AF; 
+    padding: 10px;
+    border-radius: 5px;
+}
+h3 {
+    color: #B77466; 
+}
+ul {
+    padding-left: 20px;
+}
+li {
+    background: #FFE1AF; 
+    margin: 5px 0;
+    padding: 10px;
+    border-radius: 5px;
+    border-left: 4px solid #B77466; 
+}
+li:nth-child(odd) {
+    background: #e8cea6; 
+}
