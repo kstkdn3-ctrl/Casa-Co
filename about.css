@@ -1,7 +1,7 @@
 body {
     font-family: Arial, sans-serif;
-    background: #FFE1AF; 
-    padding: 20px;
+    background: #FFE1AF;
+    margin: 0; 
 }
 h1 {
     color: #B77466; 
@@ -30,5 +30,5 @@ li {
     border-left: 4px solid #B77466; 
 }
 li:nth-child(odd) {
-    background: #e8cea6; 
+    background: #efd2a7; 
 }
