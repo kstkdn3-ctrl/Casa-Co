@@ -10,15 +10,58 @@
 </head>
 
 <body>
- <header class="header">
-<h1 class="h1"><a href="index.html">Casa&Co</a></h1>
-    <nav class="menu">
-      <a class="menu-elements" href="popular_goods.html">Популярні товари</a>
-      <a class="menu-elements" href="stock.html">Акції</a>
-      <a class="menu-elements" href="new_goods.html">Новинки</a>
-      <a class="menu-elements" href="about_us.html">Про нас</a>
-    </nav>
-  </header> 
+    <header class="header">
+        <div class="top-line">
+            <h1 class="h1"><a href="index.html">Casa&Co</a></h1>
+            <!-- Кошик -->
+        <div class="cart-container">
+            <a href="cart.html" class="cart-icon">
+                <svg width="30" height="30" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M9 22C9.55228 22 10 21.5523 10 21C10 20.4477 9.55228 20 9 20C8.44772 20 8 20.4477 8 21C8 21.5523 8.44772 22 9 22Z" fill="#b77466"/>
+                    <path d="M20 22C20.5523 22 21 21.5523 21 21C21 20.4477 20.5523 20 20 20C19.4477 20 19 20.4477 19 21C19 21.5523 19.4477 22 20 22Z" fill="#b77466"/>
+                    <path d="M1 1H5L7.68 14.39C7.77144 14.8504 8.02191 15.264 8.38755 15.5583C8.75318 15.8526 9.2107 16.009 9.68 16H19.4C19.8693 16.009 20.3268 15.8526 20.6925 15.5583C21.0581 15.264 21.3086 14.8504 21.4 14.39L23 6H6" stroke="#b77466" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <span class="cart-count" id="cartCount">0</span>
+            </a>
+        </div>
+            <div class="search-box">
+                <input type="text" class="search-input-small" placeholder="Пошук...">
+                <button class="search-button" id="searchBtn">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M15.5 14H14.71L14.43 13.73C15.41 12.59 16 11.11 16 9.5C16 5.91 13.09 3 9.5 3C5.91 3 3 5.91 3 9.5C3 13.09 5.91 16 9.5 16C11.11 16 12.59 15.41 13.73 14.43L14 14.71V15.5L19 20.49L20.49 19L15.5 14ZM9.5 14C7.01 14 5 11.99 5 9.5C5 7.01 7.01 5 9.5 5C11.99 5 14 7.01 14 9.5C14 11.99 11.99 14 9.5 14Z" fill="#b77466"/>
+        </svg>
+                </button>
+            </div>
+        </div>
+        <nav class="menu">
+            <a class="menu-elements" href="popular_goods.html">Популярні товари</a>
+            <a class="menu-elements" href="stock.html">Акції</a>
+            <a class="menu-elements" href="new_goods.html">Новинки</a>
+            <a class="menu-elements" href="about_us.html">Про нас</a>
+        </nav>
+    </header>
+
+    <!-- Вікно пошуку -->
+    <div class="search-overlay" id="searchOverlay">
+        <div class="search-container">
+            <div class="search-header">
+                <h2>Пошук товарів</h2>
+                <button class="close-search" id="closeSearch">&times;</button>
+            </div>
+            
+            <div class="search-input-group">
+                <input type="text" class="search-input-large" id="searchInput" 
+                       placeholder="Що ви шукаєте? Наприклад: крісло, диван, стіл...">
+                <button class="search-button" id="performSearch">Знайти</button>
+            </div>
+            
+            <p class="search-hint">Введіть назву товару, категорію або ключові слова для пошуку</p>
+            
+            <div class="search-results" id="searchResults">
+                <!-- Результати пошуку будуть додаватись через JavaScript -->
+            </div>
+        </div>
+    </div>
   <main>
   <h1>Каталог товарів</h1> 
 <div style="display:flex; flex-direction: row; justify-content: space-around; gap: 30px;  flex-wrap: wrap;">
@@ -151,6 +194,7 @@
   </div>
   </div>
 </footer>
-<script src="script.js" defer></script>
+<script src="script.js" defer>
+</script>
 </body>
 </html>
