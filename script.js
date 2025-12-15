@@ -180,7 +180,6 @@ function updateCart() {
   } else {
     console.log("Не знайшов елемент кошика!");
 
-    // Створимо кошик, якщо його немає
     const header = document.querySelector("header");
     if (header) {
       const newCart = document.createElement("div");
@@ -190,14 +189,14 @@ function updateCart() {
     }
   }
 }
-
 // Додаємо події на всі кнопки
 document.addEventListener("DOMContentLoaded", function () {
   console.log("Сторінка завантажена. Шукаю кнопки...");
 
   const buyButtons = document.querySelectorAll(".button");
-  console.log("Знайшов кнопок:", buyButtons.length);
+  console.log("Знайшов кнопок 'Купити':", buyButtons.length);
 
+  // Додаємо обробку для кнопок "Купити" (.button)
   buyButtons.forEach((button, index) => {
     // Видаляємо старі обробники
     button.onclick = null;
@@ -223,17 +222,63 @@ document.addEventListener("DOMContentLoaded", function () {
     };
   });
 
+  // ДОДАНО: Обробка для кнопок "Додати до кошика" (.action-btn)
+  const addToCartButtons = document.querySelectorAll(".action-btn");
+  console.log("Знайшов кнопок 'Додати до кошика':", addToCartButtons.length);
+
+  addToCartButtons.forEach((button, index) => {
+    // Видаляємо старі обробники
+    button.onclick = null;
+
+    // Додаємо новий обробник
+    button.onclick = function (e) {
+      e.preventDefault();
+      e.stopPropagation();
+
+      cartCount++;
+      console.log(`Кнопка 'Додати до кошика' ${index + 1} натиснута. Кошик: ${cartCount}`);
+
+      updateCart();
+
+      // Візуальний ефект
+      const originalText = button.textContent;
+      button.style.backgroundColor = "#4CAF50";
+      button.textContent = "✓ Додано";
+
+      setTimeout(() => {
+        button.style.backgroundColor = "";
+        button.textContent = originalText;
+      }, 1000);
+    };
+  });
+
   // Ініціалізуємо кошик
   updateCart();
 });
 
+// Додаємо стилі для кнопок (якщо ще не додано)
+const style = document.createElement('style');
+style.textContent = `
+  .button, .action-btn {
+    transition: all 0.3s ease;
+    cursor: pointer;
+  }
+  .button:hover, .action-btn:hover {
+    opacity: 0.8;
+  }
+`;
 document.head.appendChild(style);
-buttons.forEach((btn) => {
+
+// Існуючий код для кнопок фільтрів
+const buttons2 = document.querySelectorAll('.filter-btn');
+buttons2.forEach((btn) => {
   btn.addEventListener("click", () => {
-    buttons.forEach((b) => b.classList.remove("active"));
+    buttons2.forEach((b) => b.classList.remove("active"));
     btn.classList.add("active");
   });
 });
+
+// Існуючий код для плавної прокрутки
 document.getElementById("char").addEventListener("click", function () {
   document.getElementById("char1").scrollIntoView({
     behavior: "smooth",
@@ -250,6 +295,7 @@ document.getElementById("reviews").addEventListener("click", function () {
   });
 });
 
+// Існуючий код для модального вікна галереї
 const modal = document.getElementById("galleryModal");
 const modalBigImage = document.getElementById("modalBigImage");
 let images = [];
